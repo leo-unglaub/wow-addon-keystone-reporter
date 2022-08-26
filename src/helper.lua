@@ -37,7 +37,7 @@ KeystoneReporter.findKeysInBag = function()
 
 			-- check if there is an item at this position in the bag
 			if itemID ~= nil then
-				local _, _, _, itemLevel, _, _, _, _, _, _, _, classID, subclassID, _, _, _, _ = GetItemInfo(itemID)
+				local _, _, _, _, _, _, _, _, _, _, _, classID, subclassID, _, _, _, _ = GetItemInfo(itemID)
 
 				-- check if the item is actually a keystone
 				if classID == Enum.ItemClass.Reagent and subclassID == Enum.ItemReagentSubclass.Keystone then

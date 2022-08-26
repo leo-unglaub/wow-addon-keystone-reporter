@@ -1,0 +1,11 @@
+## Interface: 90207
+## Version: 0.1.0
+## Title: Keystone Reporter
+## Notes: Reports your myth keystones to your group, guild or friends.
+## Author: Wolferinee
+## SavedVariables: KeystoneReporterSettingsUser
+
+src/helper.lua
+src/handler-events.lua
+src/handler-slash-commands.lua
+src/main.lua

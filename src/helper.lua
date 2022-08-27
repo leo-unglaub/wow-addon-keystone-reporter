@@ -69,16 +69,17 @@ end
 
 -- Send a message wit all the keystones to all friends (online only)
 KeystoneReporter.Sender.friends = function()
-	for i = 1, C_FriendList.GetNumFriends() do
-		friend = C_FriendList.GetFriendInfoByIndex(i)
+	for friendId = 1, BNGetNumFriends() do
+		local friend = C_BattleNet.GetAccountInfoByID(friendId)
 
-		if friend == nil then
-			return
-		end
-		-- if online, if not dnd, ...
-
-		for key, value in pairs(KeystoneReporter.findKeysInBag()) do
-			-- SendChatMessage(value, "WHISPER", nil, friend.name)
+		if friend
+			and friend.gameAccountInfo.clientProgram == BNET_CLIENT_WOW
+			and friend.gameAccountInfo.isOnline == true
+			and friend.gameAccountInfo.isGameAFK == false
+			and friend.gameAccountInfo.isGameBusy == false then
+			for _, value in pairs(KeystoneReporter.findKeysInBag()) do
+				BNSendWhisper(friendId, value)
+			end
 		end
 	end
 end

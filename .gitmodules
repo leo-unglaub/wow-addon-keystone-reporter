@@ -1,0 +1,3 @@
+[submodule "libs/ace3"]
+	path = libs/ace3
+	url = https://github.com/WoWUIDev/Ace3.git

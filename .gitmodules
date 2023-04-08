@@ -1,6 +1,3 @@
 [submodule "libs/ace3"]
 	path = libs/ace3
 	url = https://github.com/WoWUIDev/Ace3.git
-[submodule "libs/wow-ui-source"]
-	path = libs/wow-ui-source
-	url = https://github.com/Gethe/wow-ui-source.git
